@@ -1,0 +1,23 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  top: 0; 
+  right: 0; 
+  width: 200px; 
+  height: 100vh; 
+  padding: 20px; 
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+  z-index: 50;
+}
+
+.glContainer{
+  flex:1;
+  background-color:pink;
+}
+
+.clContainer{
+  flex:1;
+  background-color: rgb(109, 209, 109);
+}
