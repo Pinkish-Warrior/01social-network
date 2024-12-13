@@ -41,7 +41,7 @@ func main() {
 	}
 
 	// Start the server
-	log.Printf("Server starting on port %s", port)
+	log.Printf("Server starting on port http://localhost:%s", port)
 	err = http.ListenAndServe(":"+port, corsMux)
 	if err != nil {
 		log.Fatalf("Server failed to start: %v", err)
