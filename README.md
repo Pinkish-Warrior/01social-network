@@ -1,6 +1,7 @@
-## Social Network
+# Social Network #
 
-### Objectives
+
+## Objectives ##
 
 You will have to create a Facebook-like social network that will contain the following features:
 
@@ -11,15 +12,15 @@ You will have to create a Facebook-like social network that will contain the fol
 - Notification
 - Chats
 
-### Instructions
+### Instructions ###
 
-### Frontend
+### Frontend ###
 
 Frontend development is the art of creating sites and web applications that render on the "client-side". It includes everything that users experience directly: text colors and styles, images, graphs and tables, buttons, colors, and navigation menus. It focuses on making requests to the backend in order to get specific chunks of data to be used or send data to be stored on the backend.
 
 HTML, CSS, and Javascript are the languages used for frontend development. Responsiveness and performance are two main objectives of the frontend. Frontend frameworks may be used to simplify a developers work.
 
-#### Framework
+#### Framework ####
 
 You will have to use a JS framework. It is up to you to choose which one you are going to use.
 
@@ -34,13 +35,13 @@ Some of the most known JS frameworks around are:
 
 Caution: Note that JS frameworks are different from JS libraries. JS libraries contain code snippets that are used to perform common JavaScript functions, while frameworks will help you by laying out the groundwork/building the bases for your JS project.
 
-#### About Next.js
+#### About Next.js ####
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Getting Started ##
 
-1. install all dependencies
+1.install all dependencies
 
 ```bash
 npm install
@@ -48,7 +49,7 @@ npm install
 nom i
 ```
 
-2. run the development server:
+2.run the development server:
 
 ```bash
 npm run dev
@@ -66,7 +67,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Learn More ##
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -75,23 +76,23 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on Vercel ##
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## Cache issue :
+## Cache issue ##
 
 sometimes the cache can become corrupted. Clear the .next cache folder to force Next.js to rebuild from scratch:
 
-```
-rm -rf .next
+```sh
+  rm -rf .next
 ```
 
 ---
 
-### Backend
+### Backend ###
 
 The backend is all of the technology required to process the incoming requests and generate and send responses to the client.
 This is typically divided into three major parts:
@@ -102,7 +103,7 @@ This is typically divided into three major parts:
 
 - **Database**: As you may already know, the database is used to organize and store data. Many requests sent to the server involve database queries. Clients may request information stored in the database or submit data to be added to it.
 
-#### App
+#### App ####
 
 The backend may consist, like said above, of an **app** containing all the backend logic. This logic will therefore have several middleware, for example:
 
@@ -112,14 +113,14 @@ The backend may consist, like said above, of an **app** containing all the backe
 
 For the web server you can take a look at [caddy](https://caddyserver.com/docs/), it can serve your site, services and apps and its written in **Go**. Or you are free to create your own web server.
 
-#### Sqlite
+#### Sqlite ####
 
 In order to store the data in your social network, you will use the database library SQLite.
 To structure your database and to achieve better performance we highly advise you to take a look at the [entity relationship diagram](https://www.smartdraw.com/entity-relationship-diagram/) and build one based on your own database.
 
 To know more about SQLite you can check the [SQLite page](https://www.sqlite.org/index.html).
 
-#### Migrate
+#### Migrate ####
 
 You will have to create migrations for this project so every time the application runs, it creates the specific tables to make the project work properly.
 
@@ -154,11 +155,11 @@ This migration system can help you manage your time and testing, by filling your
 
 ---
 
-### How to run the program:
+### How to run the program ###
 
 - Run backend
 
-```
+```sh
 cd backend
 go mod tidy
 go run /cmd/main.go
@@ -166,14 +167,14 @@ go run /cmd/main.go
 
 - Run frontend (open another terminal, navigate to project directory)
 
-```
+```sh
 npm install
 npm run dev
 ```
 
-### docker
+### docker ###
 
-**Containerizing the Backend and Frontend**
+**Containerizing the Backend and Frontend:**
 
 Your project should consist of two Docker images, one for the backend and another for the frontend. Each of these containers serves a specific purpose and communicates with each other to provide a functional social network application.
 
@@ -192,7 +193,7 @@ Create a Docker image for the frontend of your social network application. This 
 
 ---
 
-### Authentication
+### Authentication ###
 
 In order for the users to use the social network they will have to make an account. So you will have to make a registration and login form. To register, every user should provide at least:
 
@@ -213,7 +214,7 @@ You can implement your own package for sessions and cookies or you can take a lo
 
 ---
 
-### Followers
+### Followers ###
 
 When navigating the social network the user should be able to follow and unfollow other users. Needless to say that to unfollow a user you have to be following him/her.
 
@@ -221,7 +222,7 @@ Regarding following someone, the user must initiate this by sending a follow req
 
 ---
 
-### Profile
+### Profile ###
 
 Every profile should contain :
 
@@ -236,7 +237,7 @@ When the user is in their own profile it should be available an option that allo
 
 ---
 
-### Posts
+### Posts ###
 
 After a user is logged in he/she can create posts and comments on already created posts. While creating a post or a comment, the user can include an image or GIF.
 
@@ -248,7 +249,7 @@ The user must be able to specify the privacy of the post:
 
 ---
 
-### Groups
+### Groups ###
 
 A user must be able to create a group. The group should have a title and a description given by the creator and he/she can invite other users to join the group.
 
@@ -271,7 +272,7 @@ After creating the event every user can choose one of the options for the event.
 
 ---
 
-### Chat
+### Chat ###
 
 Users should be able to send private messages to other users that they are following or being followed, in other words, at least one of the users must be following the other.
 
@@ -283,7 +284,7 @@ Groups should have a common chat room, so if a user is a member of the group he/
 
 ---
 
-### Notifications
+### Notifications ###
 
 A user must be able to see the notifications in every page of the project. New notifications are different from new private messages and should be displayed in a different way!
 
@@ -296,7 +297,7 @@ A user should be notified if he/she:
 
 Every other notification created by you that isn't on the list is welcomed too.
 
-#### Allowed Packages
+#### Allowed Packages ###
 
 - The [standard Go](https://golang.org/pkg/) packages are allowed
 - [Gorilla](https://pkg.go.dev/github.com/gorilla/websocket) websocket
@@ -323,9 +324,9 @@ This project will help you learn about:
 
 ---
 
-### Semantic Commit Messages
+### Semantic Commit Messages ###
 
-### **Intro**
+**Intro:**
 
 See how a minor change to your commit message style can make you a better programmer.
 
@@ -335,7 +336,7 @@ Format: `<type>(<scope>): <subject>`
 
 **Example:**
 
-```
+```sh
 feat: add hat wobble
 ^--^  ^------------^
 |     |
@@ -344,7 +345,7 @@ feat: add hat wobble
 +-------> Type: chore, docs, feat, fix, refactor, style, or test.`
 ```
 
-### **More Examples:**
+***More Examples:***
 
 `feat`: (new feature for the user, not a new feature for build script)
 
